@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Our Organic Products</h1>
+</header>
+
+<!-- Search Bar -->
+<input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()" class="search">
+
+<!-- Category Filters -->
+<div class="filter-box">
+    <button onclick="filterProducts('all')" class="f-btn">All</button>
+    <button onclick="filterProducts('milk')" class="f-btn">Milk</button>
+    <button onclick="filterProducts('vegetables')" class="f-btn">Vegetables</button>
+    <button onclick="filterProducts('fruits')" class="f-btn">Fruits</button>
+    <button onclick="filterProducts('home')" class="f-btn">Home Needs</button>
+</div>
+
+<!-- Product List -->
+<div id="productContainer">
+
+    <!-- MILK -->
+    <div class="product milk" data-name="A2 Cow Milk">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" class="p-img">
+        <h2>A2 Cow Milk</h2>
+        <p>₹60 / Litre</p>
+        <button class="btn" onclick="addToCart('A2 Cow Milk', 60)">Add to Cart</button>
+    </div>
+
+    <div class="product milk" data-name="Buffalo Milk">
+        <img src="https://images.unsplash.com/photo-1542444459-db63f2af0c97" class="p-img">
+        <h2>Buffalo Milk</h2>
+        <p>₹70 / Litre</p>
+        <button class="btn" onclick="addToCart('Buffalo Milk', 70)">Add to Cart</button>
+    </div>
+
+    <div class="product milk" data-name="Goat Milk">
+        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150" class="p-img">
+        <h2>Goat Milk</h2>
+        <p>₹100 / Litre</p>
+        <button class="btn" onclick="addToCart('Goat Milk', 100)">Add to Cart</button>
+    </div>
+
+    <!-- VEGETABLES -->
+    <div class="product vegetables" data-name="Tomatoes">
+        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" class="p-img">
+        <h2>Organic Tomatoes</h2>
+        <p>₹30 / Kg</p>
+        <button class="btn" onclick="addToCart('Organic Tomatoes', 30)">Add to Cart</button>
+    </div>
+
+    <div class="product vegetables" data-name="Potatoes">
+        <img src="https://images.unsplash.com/photo-1587731208501-b587c1b8d30b" class="p-img">
+        <h2>Organic Potatoes</h2>
+        <p>₹35 / Kg</p>
+        <button class="btn" onclick="addToCart('Organic Potatoes', 35)">Add to Cart</button>
+    </div>
+
+    <div class="product vegetables" data-name="Carrots">
+        <img src="https://images.unsplash.com/photo-1506804558530-9f8e4f0f3e43" class="p-img">
+        <h2>Carrots</h2>
+        <p>₹40 / Kg</p>
+        <button class="btn" onclick="addToCart('Carrots', 40)">Add to Cart</button>
+    </div>
+
+    <div class="product vegetables" data-name="Spinach">
+        <img src="https://images.unsplash.com/photo-1604909053114-e1f39ea56430" class="p-img">
+        <h2>Spinach</h2>
+        <p>₹25 / Bunch</p>
+        <button class="btn" onclick="addToCart('Spinach', 25)">Add to Cart</button>
+    </div>
+
+    <!-- FRUITS -->
+    <div class="product fruits" data-name="Bananas">
+        <img src="https://images.unsplash.com/photo-1574226516831-e1dff420e43e" class="p-img">
+        <h2>Bananas</h2>
+        <p>₹50 / Dozen</p>
+        <button class="btn" onclick="addToCart('Bananas', 50)">Add to Cart</button>
+    </div>
+
+    <div class="product fruits" data-name="Apples">
+        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" class="p-img">
+        <h2>Apples</h2>
+        <p>₹180 / Kg</p>
+        <button class="btn" onclick="addToCart('Apples', 180)">Add to Cart</button>
+    </div>
+
+    <div class="product fruits" data-name="Papaya">
+        <img src="https://images.unsplash.com/photo-1542838687-2d0d8d5f3c9f" class="p-img">
+        <h2>Papaya</h2>
+        <p>₹60 / Piece</p>
+        <button class="btn" onclick="addToCart('Papaya', 60)">Add to Cart</button>
+    </div>
+
+    <!-- HOME NEEDS -->
+    <div class="product home" data-name="Organic Honey">
+        <img src="https://images.unsplash.com/photo-1514995669114-b2e86fc7fa1d" class="p-img">
+        <h2>Organic Honey</h2>
+        <p>₹250 / 500gm</p>
+        <button class="btn" onclick="addToCart('Organic Honey', 250)">Add to Cart</button>
+    </div>
+
+    <div class="product home" data-name="Fresh Curd">
+        <img src="https://images.unsplash.com/photo-1528756514091-dee5ecaa3278" class="p-img">
+        <h2>Fresh Curd</h2>
+        <p>₹60 / 500gm</p>
+        <button class="btn" onclick="addToCart('Fresh Curd', 60)">Add to Cart</button>
+    </div>
+
+    <div class="product home" data-name="Pure Cow Ghee">
+        <img src="https://images.unsplash.com/photo-1606788075761-869a1f3fcd75" class="p-img">
+        <h2>Pure Cow Ghee</h2>
+        <p>₹450 / 500ml</p>
+        <button class="btn" onclick="addToCart('Pure Cow Ghee', 450)">Add to Cart</button>
+    </div>
+
+    <div class="product home" data-name="Groundnut Oil">
+        <img src="https://images.unsplash.com/photo-1603052875253-7a0b89ce733d" class="p-img">
+        <h2>Cold-Pressed Groundnut Oil</h2>
+        <p>₹220 / Litre</p>
+        <button class="btn" onclick="addToCart('Groundnut Oil', 220)">Add to Cart</button>
+    </div>
+
+</div>
+
+<a href="cart.html" class="btn cart-btn">Go to Cart</a>
+
+<script src="script.js"></script>
+</body>
+</html>
